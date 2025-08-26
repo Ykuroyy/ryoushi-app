@@ -17,7 +17,7 @@ export default function HomeScreen({ navigation }: Props) {
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.header}>
-          <Text style={styles.title}>量子もつれ</感>
+          <Text style={styles.title}>量子もつれ</Text>
           <Text style={styles.subtitle}>Quantum Entanglement</Text>
         </View>
 

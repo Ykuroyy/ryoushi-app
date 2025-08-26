@@ -1,8 +1,9 @@
 {
-  "buildCommand": "npm run web",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "devCommand": "npm run web",
+  "framework": null,
   "headers": [
     {
       "source": "/(.*)",

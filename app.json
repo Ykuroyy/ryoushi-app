@@ -26,7 +26,7 @@
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro",
-      "output": "static",
+      "output": "single",
       "name": "量子もつれ学習アプリ",
       "shortName": "量子もつれ",
       "lang": "ja",
