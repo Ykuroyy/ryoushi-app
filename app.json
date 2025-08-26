@@ -1,29 +1,47 @@
 {
   "expo": {
-    "name": "ryoushi-app",
+    "name": "量子もつれ学習アプリ",
     "slug": "ryoushi-app",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0a0e27"
     },
+    "description": "量子もつれについて楽しく学べる教育アプリ。基礎から最新研究まで、クイズ付きで理解度もチェックできます。",
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0a0e27"
       },
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "static",
+      "name": "量子もつれ学習アプリ",
+      "shortName": "量子もつれ",
+      "lang": "ja",
+      "scope": "/",
+      "themeColor": "#6366f1",
+      "backgroundColor": "#0a0e27",
+      "orientation": "any",
+      "display": "standalone",
+      "startUrl": "/",
+      "meta": {
+        "description": "量子もつれについて楽しく学べる教育アプリ。アインシュタインが不気味な遠隔作用と呼んだ量子の世界を探検しよう！",
+        "keywords": "量子物理学,量子もつれ,物理学,教育,学習,クイズ,ノーベル賞,量子コンピュータ",
+        "author": "Quantum Learning App",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      }
     }
   }
 }
