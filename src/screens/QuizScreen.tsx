@@ -82,6 +82,7 @@ const quizQuestions: QuizQuestion[] = [
 export default function QuizScreen({ navigation }: Props) {
   const { width } = Dimensions.get('window');
   const isWeb = width > 768;
+  const styles = getStyles(isWeb);
   
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -255,7 +256,7 @@ export default function QuizScreen({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const getStyles = (isWeb: boolean) => StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0a0e27',

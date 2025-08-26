@@ -4,8 +4,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../types/navigation';
 
-const { width } = Dimensions.get('window');
-const isWeb = width > 768;
 
 type Props = {
   navigation: NavigationProp<RootStackParamList, 'Content'>;
@@ -95,6 +93,9 @@ const contentSections = [
 ];
 
 export default function ContentScreen({ navigation }: Props) {
+  const { width } = Dimensions.get('window');
+  const isWeb = width > 768;
+  const styles = getStyles(isWeb);
   const [expandedSection, setExpandedSection] = useState<string | null>('basics');
 
   return (
@@ -147,7 +148,7 @@ export default function ContentScreen({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const getStyles = (isWeb: boolean) => StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0a0e27',

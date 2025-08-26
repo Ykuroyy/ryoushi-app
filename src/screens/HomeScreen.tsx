@@ -4,15 +4,17 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationProp } from '@react-navigation/native';
 import { RootStackParamList } from '../types/navigation';
 
-const { width, height } = Dimensions.get('window');
-const isWeb = width > 768;
-const isMobile = width <= 768;
 
 type Props = {
   navigation: NavigationProp<RootStackParamList, 'Home'>;
 };
 
 export default function HomeScreen({ navigation }: Props) {
+  const { width, height } = Dimensions.get('window');
+  const isWeb = width > 768;
+  const isMobile = width <= 768;
+  const styles = getStyles(isWeb);
+  
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
@@ -83,7 +85,7 @@ export default function HomeScreen({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const getStyles = (isWeb: boolean) => StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0a0e27',
